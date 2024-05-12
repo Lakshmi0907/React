@@ -7,12 +7,19 @@
 </head>
 <body>
   <div id="root">
+    <!-- though we have multiple lines here react will replace all these elements into the elements that we have written inside the react element
+    <h1 id="title">sample</h1>
+    <h1 id="title">sample</h1>
+
+    <h1 id="title">sample</h1> -->
+
   </div>
 </body>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
-  const heading = React.createElement("h1", {}, "Namasthe React");
+  const heading = React.createElement("h1",{id:"title"}, "Namasthe React");
+  console.log(heading);
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(heading);
 </script>
