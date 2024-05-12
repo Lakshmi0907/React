@@ -6,7 +6,7 @@
   <title>Namasthe React</title>
 </head>
 <body>
-  <div id="root">
+  <div id="root">Not rendering
     <!-- though we have multiple lines here react will replace all these elements into the elements that we have written inside the react element
     <h1 id="title">sample</h1>
     <h1 id="title">sample</h1>
@@ -14,13 +14,17 @@
     <h1 id="title">sample</h1> -->
 
   </div>
-</body>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
-  const heading = React.createElement("h1",{id:"title"}, "Namasthe React");
-  console.log(heading);
+  const heading1 = React.createElement("h1",{id:"title"}, "Namasthe React");
+  const heading2 = React.createElement("h2",{id:"title"}, "Namasthe React");
+  const container = React.createElement("div",{id:"container"}, [heading1,heading2]);
+
+  console.log(heading1);
   const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(heading);
+  root.render(container);
 </script>
+</body>
 </html>
