@@ -8,6 +8,9 @@
   * compression
   * parcel gives us a functionality to enable https on local build(dev)- it wil though error if we use https with the localhost because chrome or browser doesn't trust the lcoahost as secure
   * we should put parcel.cache in gitignore
+  * parcel uses consistent hashing algorithm
+  * parcel is a zero config bundler - we don't need to config anything after installling parcel we will just mention the 
+  * starting file in the command itself wihtout configuring anything
 
 */  
 import React from 'react';

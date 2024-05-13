@@ -1,1 +1,4 @@
+# Anything which can be auto generated will be put inside the gitignore
+# anything we can generate on server can be put inside gitignore
+
 .parcel-cache
