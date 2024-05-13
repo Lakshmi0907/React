@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Namasthe React</title>
+  <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
   <div id="root">Not rendering
@@ -14,19 +15,10 @@
     <h1 id="title">sample</h1> -->
 
   </div>
-
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script>
-  // this is one of the way to create react elements using createElement API it is really complex when we create multiple and complex tags
-  // while deLing with the large scale applicaiton . to avoid such complexity react came up with a new feature such as JSX which is javascript extension which is similar to the HTML tags
-  const heading1 = React.createElement("h1",{id:"title"}, "Namasthe React");
-  const heading2 = React.createElement("h2",{id:"title"}, "Namasthe React");
-  const container = React.createElement("div",{id:"container"}, [heading1,heading2]);
-
-  console.log(heading1);
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(container);
+<!-- This is one way of injecting react on web application -->
+<!-- <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+<script type="module" src="App.js">
 </script>
 </body>
 </html>
