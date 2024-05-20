@@ -2951,7 +2951,7 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$c1db.prelude(module);
 
 try {
-/*** Hot Module reloading which automatically refreshes the web page even wihtout reloading the page
+/*** Hot Module replacement which automatically refreshes the web page even wihtout reloading the page
   * after making changes in the code
   * file watcher algorithm written in C++ because it is faster
   * this algorihtm it just keep a track of all the files whihc are changing real time and it tells the server reload
@@ -2961,6 +2961,16 @@ try {
   * compression
   * parcel gives us a functionality to enable https on local build(dev)- it wil though error if we use https with the localhost because chrome or browser doesn't trust the lcoahost as secure
   * we should put parcel.cache in gitignore
+  * parcel uses consistent hashing algorithm
+  * parcel is a zero config bundler - we don't need to config anything after installling parcel we will just mention the 
+  * starting file in the command itself wihtout configuring anything
+React.createElement("ul",{},[React.createElement("li",{}, "About Us"),React.createElement("li",{}, "Support"),React.createElement("li",{}, "Home")])]);
+writing this kind of code is difficulty when we want to build big applicaiton so this is where JSX comes into picture
+it is not necessary to use JSX we can also build the same code which is written in JSX with the help of createElement so in order make it easier to
+write the code it is better to use the JSX
+major reason fir bringing react is 
+we want to update html using havascript in a better 
+how we used to update html using javascript document.getElementById but by using react we can update whole HTML using javascript with the help of react
 
 */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
@@ -2968,18 +2978,26 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const heading1 = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "title"
+    id: "title",
+    key: "h1"
 }, "Namasthe React");
 const heading2 = /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {
-    id: "title1"
+    id: "title1",
+    key: "h2"
 }, "Namasthe React");
 const container = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
     id: "container"
 }, [
-    heading1,
-    heading2
+    /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
+        id: "title",
+        key: "h1"
+    }, "Namasthe React"),
+    /*#__PURE__*/ (0, _reactDefault.default).createElement("ul", {}, [
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("li", {}, "About Us"),
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("li", {}, "Support"),
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("li", {}, "Home")
+    ])
 ]);
-console.log(heading1);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(container);
 
@@ -2988,37 +3006,7 @@ root.render(container);
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("a569817e6ea559f6");
 
@@ -26412,6 +26400,36 @@ module.exports = require("ef03b89c8fe2794e");
     exports.unstable_wrapCallback = unstable_wrapCallback;
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
+
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}],"km3Ru":[function(require,module,exports) {
 "use strict";
