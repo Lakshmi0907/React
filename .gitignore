@@ -2,3 +2,4 @@
 # anything we can generate on server can be put inside gitignore
 
 .parcel-cache
+.node_modules
