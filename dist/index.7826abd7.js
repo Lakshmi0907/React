@@ -2971,7 +2971,7 @@ write the code it is better to use the JSX
 major reason fir bringing react is 
 we want to update html using havascript in a better 
 how we used to update html using javascript document.getElementById but by using react we can update whole HTML using javascript with the help of react
-
+JSX is a HTML like syntax but it is not HTML inside Javascript
 */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
